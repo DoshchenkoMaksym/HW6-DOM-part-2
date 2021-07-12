@@ -1,23 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
     <script defer src="main.js"></script>
 </head>
+
 <body>
-    <div class="figure"></div>
-    <select name="choice" id="selectForm">
-        <option disabled selected value> -- select an option -- </option>
-        <option value="square">Квадрат</option>
-        <option value="rectangle">Прямоугольник</option>
-        <option value="circle">Круг</option>
-    </select>
-    <form>
-        <input type="text">
-    </form>
-    <button>Confirm</button>
+    <div class="wrapper">
+        <main class="main">
+            <div class="container">
+                <div class="container__inner">
+                    <div class="container__inner-figure">
+                        <p class="title">Выбери фигуру</p>
+                        <select name="choice" id="selectForm">
+                            <option disabled selected value> -- select -- </option>
+                            <option value="square">Квадрат</option>
+                            <option value="rectangle">Прямоугольник</option>
+                            <option value="circle">Круг</option>
+                        </select>
+                    </div>
+                    <div class="container__inner-color">
+                        <p class="title">Напиши цвет фигуры</p>
+                        <form>
+                            <input class="colorInput" type="text">
+                        </form>
+                        <button class="btnConfirmInput">Confirm</button>
+                    </div>
+
+                </div>
+                <div class="container__figure">
+                    
+                    <div class="figure"></div>
+                </div>
+
+            </div>
+        </main>
+    </div>
 </body>
+
 </html>

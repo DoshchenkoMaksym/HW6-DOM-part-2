@@ -4,8 +4,8 @@ let colorInput = document.querySelector('.colorInput');
 let btnConfirmInput = document.querySelector('.btnConfirmInput');
 
 // Первый вариант выполнения через замену класса с css файла// 
-selectForm.onclick = event => {
-    switch (selectForm.value) {
+selectForm.addEventListener('change', (event) => {
+    switch (event.target.value) {
         case "square":
             ourFigure.setAttribute('class', 'squareDiv');
             break;
@@ -14,51 +14,13 @@ selectForm.onclick = event => {
             break;
         case "circle":
             ourFigure.setAttribute('class', 'circleDiv');
+            break;
         default:
             break
     };
-}
-// Второй вариант выполнения через установку стилей напрямую //
-/* selectForm.onclick = event => {
-    switch (selectForm.value) {
-        case "square":
-            ourFigure.style.width = '100px';
-            ourFigure.style.height = '100px';
-            ourFigure.style.borderRadius = '0';
-            ourFigure.style.background = 'black';
-            break;
-        case "rectangle":
-            ourFigure.style.width = '200px';
-            ourFigure.style.height = '100px';
-            ourFigure.style.borderRadius = '0';
-            ourFigure.style.background = 'black';
-            break;
-        case "circle":
-            ourFigure.style.width = '100px';
-            ourFigure.style.height = '100px';
-            ourFigure.style.borderRadius = '50%';
-            ourFigure.style.background = 'black';
-        default:
-            break
-    };
-} */
+});
 
-// Третий вариант выполнения вставкой элемента с классом //
-/* selectForm.onclick = event => {
-    switch (selectForm.value) {
-        case "square":
-            ourFigure.innerHTML = '<div class="squareDiv"></div>';
-            break;
-        case "rectangle":
-            ourFigure.innerHTML = '<div class="rectangleDiv"></div>';
-            break;
-        case "circle":
-            ourFigure.innerHTML = '<div class="circleDiv"></div>';
-        default:
-            break
-    };
-} */
-btnConfirmInput.onclick = event => {
+btnConfirmInput.addEventListener('click', () => {
     let ourColor = colorInput.value;
     ourFigure.style.background = ourColor;
-};
+});
